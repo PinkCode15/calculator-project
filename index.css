@@ -1,0 +1,50 @@
+table {
+    margin: 10px auto;
+    background-color: #616269;
+    border-radius: 50px;
+    border-spacing: 0;
+    padding: 45px 30px;
+}
+td {
+    border-spacing: 0;
+    padding: 7px;
+    text-align: center;
+}
+input[type="text"] {
+    width: 95%;
+    padding: 0px 10px;
+    text-align: right;
+    background-color: #d0d6e1;
+    color: black;
+    font-size: 35px;
+    font-weight: bolder;
+    border-radius: 10px;
+    height: 7vh;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2), 0px 3px 6px rgba(0, 0, 0, 0.1); /* Button shadow for 3D effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 30px;
+
+}
+input[type="text"]::placeholder {
+    color: black;
+}
+.repo-link{
+    text-align: center;
+    margin-bottom: 70px;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+button{
+    font-size: 60px;
+    font-weight: bolder;
+    padding: 8px 30px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2), 0px 3px 6px rgba(0, 0, 0, 0.1); /* Button shadow for 3D effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.orange-bg{
+    background-color: #f89834;
+}
