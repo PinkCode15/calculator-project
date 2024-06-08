@@ -13,6 +13,8 @@ function calculate() {
         console.log(error);
         resultElement.value = 'Error';
     }
+}
 
-    
+function reset() {
+    document.getElementById("result").value = 0;
 }
