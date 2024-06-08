@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+     environment {
+        DEPLOY_ENV = params.DEPLOY_ENV ?: "dev"
+        EMAIL_RECIPIENT = params.EMAIL_RECIPIENT ?: "juliehiva@gmail.com"
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -19,6 +24,23 @@ pipeline {
                 echo 'Deploying...'
                 // Deployment steps go here
             }
+        }
+    }
+
+    post {
+        success {
+            emailext (
+                to: EMAIL_RECIPIENT,
+                subject: "Build Success: ${currentBuild.fullDisplayName}",
+                body: "Build ${currentBuild.fullDisplayName} succeeded. Good job!"
+            )
+        }
+        failure {
+            emailext (
+                to: EMAIL_RECIPIENT,
+                subject: "Build Failure: ${currentBuild.fullDisplayName}",
+                body: "Build ${currentBuild.fullDisplayName} failed. Please investigate."
+            )
         }
     }
 }
