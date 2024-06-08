@@ -15,6 +15,6 @@ function calculate() {
     }
 }
 
-// function reset() {
-//     document.getElementById("result").value = 0;
-// }
+function reset() {
+    document.getElementById("result").value = 0;
+}
