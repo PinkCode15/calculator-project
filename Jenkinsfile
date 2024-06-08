@@ -2,8 +2,8 @@ pipeline {
     agent any
 
      environment {
-        DEPLOY_ENV = params.DEPLOY_ENV ?: "dev"
-        EMAIL_RECIPIENT = params.EMAIL_RECIPIENT ?: "juliehiva@gmail.com"
+        DEPLOY_ENV = "dev"
+        EMAIL_RECIPIENT = "juliehiva@gmail.com"
     }
 
     stages {
